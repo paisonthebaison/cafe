@@ -1,0 +1,13 @@
+ <div class="contents-wrapper__content">
+      <div class="contents-wrapper__content__date"><%= post.created_at %></div>
+      <div class="contents-wrapper__content__image" style="background-image: url(<%= post.image %>);"></div>
+
+      <div class="contents-wrapper__content__bottom">
+          <div class="contents-wrapper__content__bottom__username">
+          <%= link_to post.user.nickname, user_path(post.user), class:"contents-wrapper__content__bottom__username" %>
+          </div>
+          <div class="contents-wrapper__content__bottom__title">
+            <%= link_to post.title, post_path(post.id), class:"contents-wrapper__content__bottom__title" %>
+          </div>
+      </div>
+  </div>

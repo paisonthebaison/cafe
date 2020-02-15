@@ -1,11 +1,5 @@
 <div class="contents-wrapper">
 <% @posts.each do |post| %>
-  <div class="contents-wrapper__content">
-      <div class="contents-wrapper__content__date"><%= post.created_at %></div>
-      <div class="contents-wrapper__content__image" style="background-image: url(<%= post.image %>);"></div>
-      <div class="contents-wrapper__content__title">
-        <%= link_to post.title, post_path(post.id), class:"contents-wrapper__content__title" %>
-      </div>
-  </div>
+ <%= render partial: "post", locals: { post: post}%>
 <% end %>
 </div>

@@ -8,7 +8,6 @@ body{
     height: 56px;
     width: 100%;
     padding: 0 150px;
-    // background-color:rgba(255,254,245,0.5);
     color: rgb(10, 8, 8);
     display: flex;
     justify-content: space-between;
@@ -22,6 +21,10 @@ body{
       }
     }
     &__right{
+      &--user-btn{
+        text-decoration: none;
+        color:white;
+      }
       &--btn{
         text-decoration: none;
         line-height: 56px;
@@ -36,6 +39,18 @@ body{
     }
   }
   .contents{
+    &__register{
+      width:50%;
+      margin:0 auto;
+      color:white;
+      .actions{
+        margin-top:10px;
+      }
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
     margin: 30px auto 0;
     background-color:rgba(13,13,12,0.4);
     border-radius:30px;
@@ -55,11 +70,9 @@ body{
       flex-wrap: wrap;
       justify-content: space-between;
       &__content{
-        padding: 10px;
+        padding:10px;
         width:33%;
-        text-align:center; 
-        box-sizing: border-box;
-        justify-content: space-between;
+      
           &__date{
             text-align:left;
             color:white;
@@ -69,19 +82,30 @@ body{
 
           &__image{
             height: 280px;
-            width: 290px;
             border: solid 1px;
             background-repeat: no-repeat;
             background-size:cover;
           }
-        &__title{
-          font-size: 20px;
-          font-weight: bold;
-          padding-top: 5px;
-          text-align: center;
-          text-decoration: none;
-          color:white;
-        }
+          &__bottom{
+            display:flex;
+            &__username{
+              text-decoration: none;
+              color:white;
+              width:50%;
+            }
+  
+            &__title{
+              font-size: 20px;
+              font-weight: bold;
+              padding-top: 5px;
+              text-align: center;
+              text-decoration: none;
+              color:white;
+              width:50%;
+              text-align:right;
+              padding-right:4px;
+            }
+          }
       }
     }
 
@@ -103,10 +127,22 @@ body{
       font-weight: bold;
       color:white;
     }
-    .postDate{
+    .postUrl{
       font-size: 15px;
-      color: #999;
       text-align: center;
+      margin-top:3px;
+      a{
+        text-decoration: none;
+        color:white;
+        background-color:black;
+        padding:5px;
+      }
+      a:hover {
+        background-color: #59b1eb;
+      }
+
+      
+      
     }
     .postAuthor{
       font-size: 15px;
@@ -160,6 +196,12 @@ body{
     }
 
     &__image{
+      display: block;
+      width: 100%;
+      height: 50px;
+      margin-top: 5px;
+    }
+    &__place{
       display: block;
       width: 100%;
       height: 50px;

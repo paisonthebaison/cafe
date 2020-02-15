@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @posts = Post.includes(:user)
   end
 
   def new
@@ -22,6 +22,7 @@ class PostsController < ApplicationController
   end
 
   def update
+   
     post = Post.find(params[:id])
     post.update(post_params)
     redirect_to post_path(post.id)
@@ -35,7 +36,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :image, :content)
+    params.require(:post).permit(:title, :image, :content, :place).merge(user_id: current_user.id)
   end
 
 end
