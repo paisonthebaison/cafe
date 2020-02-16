@@ -6,6 +6,7 @@ body{
   background-image: url(coffee-2242213_1920.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height:100%;
   .header{
     height: 56px;
     width: 100%;
@@ -53,6 +54,7 @@ body{
       color:white;
       .actions{
         margin-top:10px;
+        color:white;
       }
       a{
         text-decoration: none;
