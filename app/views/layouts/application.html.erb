@@ -7,13 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+
   </head>
 
   <body>
 
    <header class="header">
       <div class="header__title">
-        <%= link_to "Our cafes", root_path , class: "header__title--text" %>
+        <%= link_to "Cafes", root_path , class: "header__title--text" %>
       </div>
       <div class="header__right">
         <% if user_signed_in? %>

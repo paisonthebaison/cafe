@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=BioRhyme+Expanded');
+
 body{
   background-color: #f6f6f6;
   min-width: 650px;
@@ -11,13 +13,19 @@ body{
     color: rgb(10, 8, 8);
     display: flex;
     justify-content: space-between;
+    padding-top:10px;
+    
     &__title{
       font-size: 30px;
       line-height: 56px;
+    
       &--text{
         text-decoration: none;
         color: rgb(8, 8, 8);
-        font-size:44px;
+        font-size:64px;
+        font-weight:bold;
+        font-family: 'Reenie Beanie', cursive;
+        
       }
     }
     &__right{
@@ -83,6 +91,7 @@ body{
           &__image{
             height: 280px;
             border: solid 1px;
+            border-radius:10px;
             background-repeat: no-repeat;
             background-size:cover;
           }
@@ -173,8 +182,8 @@ body{
       }
     }
     .postText{
-      width:90%;
-      margin: 20px 30px;
+      width:50%;
+      margin: 0 auto;
       color:white;
       overflow:scroll;
       p{
@@ -226,4 +235,34 @@ body{
   
   .user{
     padding: 15px 30px;
+  }
+
+  .comment{
+    width:50%;
+    margin:0 auto;
+  }
+  .form{
+    width:100%;
+    &__comment{
+      width:100%;
+    }
+    &__commentBtn{
+      width:100%;
+      background-color: green;
+      border-radius:20px;
+      margin-top:5px;
+      font-weight:bold;
+    }
+  }
+
+  .comments{
+    color:white;
+    background-color:rgba(0,11,18,0.7);
+    border-radius:20px;
+    padding:10px 30px;
+    box-shadow: 4px 4px rgba(240,240,223,0.2);
+    a{
+      text-decoration: none;
+      color:white;
+    }
   }
